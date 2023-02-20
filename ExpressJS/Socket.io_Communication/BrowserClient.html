@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello with Socket.io</title>
+  </head>
+  <body>
+  <!--  CDN link with socket.io    -->
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script>
+      var socket = io('http://localhost:3000');
+      socket.on('message-from-server-to-client',(msg) => {
+        document.getElementById('message').innerHTML = msg;
+      });
+      socket.emit('message-from-client-to-server','hello world!');
+    </script>
+    <p>Socket.io Hello world client started..</p>
+    <p id="message"></p>
+  </body>
+</html>
