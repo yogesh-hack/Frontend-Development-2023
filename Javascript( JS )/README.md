@@ -1,9 +1,16 @@
 ## Table Of Content
 - [Primitive](#Primitive)
-- [Closure](#Closure) 
+- [Closures](#Closures) 
 - [Execution Context](#Execution-Context)
 - [Variables(var,let,const)](#Variables(var,let,const))
 - [Operatures](#Operators)
+- [Array & methods](#Array-&-methods)
+- [Objects + methods](#Objects-+-methods)
+- [Functions](#Fuctions)
+- [Error Handling](#Error-Handling)
+- [Strick Mode](#Strict-Mode)
+- [Timeout & Interval](#Timeout-&-Interval)
+- [Classes](#Classes)
 
 # Primitive
 ### In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods or properties. There are 7 primitive data types:
@@ -56,5 +63,19 @@ init();
 ```
 
 init() creates a local variable called name and a function called displayName(). The displayName() function is an inner function that is defined inside init() and is available only within the body of the init() function. Note that the displayName() function has no local variables of its own. However, since inner functions have access to the variables of outer functions, displayName() can access the variable name declared in the parent function, init().
+
+# Execution Context
+
+
+# Variables(var,let,const)
+
+
+# Operatures
+
+# Array & methods
+
+
+# Objects + methods
+
 
 
