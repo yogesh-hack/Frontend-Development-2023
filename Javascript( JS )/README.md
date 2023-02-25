@@ -77,5 +77,12 @@ init() creates a local variable called name and a function called displayName().
 
 # Objects + methods
 
+# Functions
 
+# Error Handling
 
+# Strick Mode
+
+# Timeout & Interval
+
+# Classes
