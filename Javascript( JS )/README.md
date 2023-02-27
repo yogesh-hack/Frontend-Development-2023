@@ -69,6 +69,63 @@ init() creates a local variable called name and a function called displayName().
 
 # Variables(var,let,const)
 
+- Let
+  - Block Scope
+  ```js
+  function hello(){
+    // block scope
+    let message = "hello"
+    console.log(message)
+  }
+  
+  if(true){
+  // block Scope
+    let ans  = 10;
+    console.log(ans);
+  }
+  
+  // if try to console outside it gave error
+  console.log(message)
+  console.log(hello)
+  ```
+  `Uncought RefrenceError : message is not defined.`
+  
+  - we can chanage the data or update the data using let keyword.
+  ```js
+  let language;
+  language = "javascript";
+  console.log(language)
+  ```
+- Const
+  - Block Scope
+  - we cannot change or update the value/data by using const keyword.
+  ```js
+  const second = 60;
+  second = 30;
+  console.log(second)
+  ```
+  `Uncaught TypeError: Assignment to constant variable.`
+  
+ - Var
+  - Funciton Scope
+  ```js
+  fucntion hello(){
+    var new = "hello"
+    console.log(new);
+  }
+  
+  if(true){
+    var age = 10;
+    console.log(age)
+  }
+  
+  // if try to console outside of function
+  console.log(new)
+  
+  // no error on age variable because var is function scope not block scope
+  console.log(age)
+  ```
+  `Uncaught ReferenceError: new is not defined`
 
 # Operatures
 
