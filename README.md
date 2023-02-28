@@ -23,17 +23,17 @@ Table of Content
 # Application programming interface
 
 - API
-- 
+ 
   `API is set of definitions and prtocols that allows technology products and services to communicate via the internet.`
   
 - API Call
-- 
+ 
   `API call is simply process of sending a request to your api after setting up the right endpoints.Upon receiving your information, it is processed, and you receive feedback.
   
   Eample : - `By entering your login and password into a website and hitting enter. you made an API call.
   
 - API Endpoints
-- 
+ 
   `An endpoint is a end of a communication channel. When API's interact with other systems, Each touchpoint of interaction is considered an endpoint.`
   
   *Intall the express server*
