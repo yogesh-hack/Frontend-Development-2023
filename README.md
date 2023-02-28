@@ -28,9 +28,9 @@ Table of Content
   
 - API Call
  
-  `API call is simply process of sending a request to your api after setting up the right endpoints.Upon receiving your information, it is processed, and you receive feedback.
+  `API call is simply process of sending a request to your api after setting up the right endpoints.Upon receiving your information, it is processed, and you receive feedback.`
   
-  Eample : - `By entering your login and password into a website and hitting enter. you made an API call.
+  Eample : - `By entering your login and password into a website and hitting enter. you made an API call.`
   
 - API Endpoints
  
