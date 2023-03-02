@@ -1,9 +1,9 @@
 # DOM manipulation (Document object model)
 
 ### Table of Content
-- [1. getElementById](#1.-getElementById)
-- [2. getElementsByTagName](#2.-getElementsByTagName)
-- [3. getElementsByClassName](#3.-getElementsByClassName)
+- [1. getElementById](##1.-getElementById)
+- [2. getElementsByTagName](##2.-getElementsByTagName)
+- [3. getElementsByClassName](##3.-getElementsByClassName)
 
 ## 1. getElementById
 
