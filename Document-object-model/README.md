@@ -4,6 +4,15 @@
 - [1. getElementById](#1-getElementById)
 - [2. getElementsByTagName](#2-getElementsByTagName)
 - [3. getElementsByClassName](#3-getElementsByClassName)
+- [4. querySelector](#4-querySelector)
+- [5. querySelectorAll](#5-querySelectorAll)
+- [Traverse DOM](#Traverse-DOM)
+    - [1. parentNode](#1-parentNode)
+    - [2. childNodes](#2-childNodes)
+    - [3. nextElementSibling](#3-nextElementSibling)
+    - [4. previousElementSibling](#4-previousElementSibling)
+- [Manipulation](#Manipulation)
+- [Create elements(Example)](#Create-elements)
 
 ## 1. getElementById
 
@@ -58,7 +67,7 @@ const heading = document.querySelector('.heading');
 console.log(heading.nextElementSibling);
 ```
 
-## 3. previousElementSibling
+## 4. previousElementSibling
 ```js
 const subHeading = document.querySelector('h3');
 console.log(subHeading.previousElementSibling);
