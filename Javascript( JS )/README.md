@@ -205,3 +205,19 @@ const intervalId = setInterval(() => {
 ```
 
 # Classes
+- `Object.assign()`: Copies the values of all enumerable own properties from one or more source objects to a target object and returns the target object.
+- `Object.create()`: Creates a new object with the specified prototype object and properties.
+- `Object.defineProperties()`: Defines new or modifies existing properties directly on an object, returning the object.
+- `Object.defineProperty()`: Defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+- `Object.entries()`: Returns an array containing all enumerable property [key, value] pairs of an object.
+- `Object.freeze()`: Freezes an object, preventing new properties from being added to it and existing properties from being modified or deleted.
+- `Object.fromEntries()`: Returns a new object from an array of [key, value] pairs.
+- `Object.is()`: Determines whether two values are the same value.
+- `Object.isSealed()`: Determines if an object is sealed.
+- `Object.keys()`: Returns an array containing the names of all enumerable properties of an object.
+- `Object.preventExtensions()`: Prevents new properties from being added to an object.
+- `Object.seal()`: Prevents new properties from being added to an object and marks all existing properties as non-configurable.
+- `Object.setPrototypeOf()`: Sets the prototype (i.e. the internal [[Prototype]] property) of a specified object to another object or null.
+- `Object.values()`: Returns an array containing the values of all enumerable own properties of an object.
+- `Object.entries()`: Returns an array containing all enumerable own property [key, value] pairs of an object.
+
