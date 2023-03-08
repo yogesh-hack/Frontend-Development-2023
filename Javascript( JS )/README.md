@@ -139,7 +139,51 @@ init() creates a local variable called name and a function called displayName().
 # Error Handling
 
 # Strick Mode
+"Strict mode" is a feature of JavaScript that allows developers to opt in to a set of restrictions and changes to the default behavior of the language. When you use strict mode, the JavaScript engine enforces stricter rules for variable declaration, function declaration, and other parts of the language. Here are some of the key features of strict mode:
+
+- Strict mode enforces the use of var, let, or const to declare variables. In non-strict mode, you can omit the keyword var and create a global variable by simply assigning a value to a variable name. Strict mode prevents this behavior, which can help prevent naming conflicts and improve code clarity.
+
+- In strict mode, all variables and functions must be declared before they are used. In non-strict mode, it is possible to use variables or functions before they are declared, but this can lead to hard-to-debug errors.
+
+- In strict mode, attempting to assign a value to a read-only property or object will throw an error. This can help prevent accidental overwriting of important properties or objects.
+
+- Strict mode also prevents the use of some language features that are considered problematic, such as with statements, which can make it hard to reason about scope, and eval(), which can execute arbitrary code and be a security risk.
+
+```js
+"use strict";
+
+function myFunction() {
+  // code in strict mode here
+}
+```
 
 # Timeout & Interval
+In JavaScript, setTimeout() and setInterval() are functions that allow you to delay the execution of code or repeatedly execute code at a specified interval
+
+**settimeout()**
+-  setTimeout() function will be executed after a delay of 2 seconds.
+
+```js
+console.log('Start');
+setTimeout(() => {
+  console.log('Delayed log');
+}, 2000); // The function inside the setTimeout() will execute after 2 seconds (2000 milliseconds)
+console.log('End');
+```
+
+**setinterval()**
+- setInterval() function will be executed repeatedly at an interval of 1 second until the count variable is greater than 5. Once the count variable is greater than 5, the clearInterval() function is called to stop the execution of the code inside the setInterval() function.
+
+```js
+let count = 0;
+
+const intervalId = setInterval(() => {
+  console.log(count);
+  count++;
+  if (count > 5) {
+    clearInterval(intervalId);
+  }
+}, 1000); // The function inside the setInterval() will execute every 1 second (1000 milliseconds) until the count is greater than 5
+```
 
 # Classes
