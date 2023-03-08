@@ -155,6 +155,40 @@ JavaScript provides a variety of methods for manipulating arrays. Here are some 
 # Functions
 
 # Error Handling
+Error handling is an important part of any programming language, and JavaScript provides several ways to handle errors in your code. Here are some of the most common ways to handle errors in JavaScript:
+
+- `try/catch statement` : The try/catch statement is used to handle exceptions (errors) that occur in a block of code. The try block contains the code that might throw an exception, and the catch block handles the exception that was thrown.
+- `throw statement` : The throw statement is used to throw an exception (error) in a block of code.
+- `finally statement` : The finally statement is used to execute a block of code after a try/catch block, regardless of whether an exception was thrown or not.
+```js
+try {
+  // Code that might throw an exception
+} catch (error) {
+  // Code to handle the exception
+} finally {
+  // Code to execute regardless of whether an exception was thrown or not
+}
+```
+- `window.onerror event` : The window.onerror event is triggered when an unhandled exception occurs in JavaScript code. You can use this event to log errors or display a custom error message to the user. 
+```js
+window.onerror = function(message, url, line, column, error) {
+  // Code to handle the error
+};
+```
+- `try/catch/finally with async/await` : When using async/await syntax, you can use a combination of try/catch/finally statements to handle errors in asynchronous code.
+```js
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    // Code to handle the data
+  } catch (error) {
+    // Code to handle the error
+  } finally {
+    // Code to execute regardless of whether an exception was thrown or not
+  }
+}
+```
 
 # Strick Mode
 "Strict mode" is a feature of JavaScript that allows developers to opt in to a set of restrictions and changes to the default behavior of the language. When you use strict mode, the JavaScript engine enforces stricter rules for variable declaration, function declaration, and other parts of the language. Here are some of the key features of strict mode:
