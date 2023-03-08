@@ -130,7 +130,25 @@ init() creates a local variable called name and a function called displayName().
 # Operatures
 
 # Array & methods
+JavaScript provides a variety of methods for manipulating arrays. Here are some of the most commonly used array methods in JavaScript:
 
+- concat() - `Concatenates two or more arrays into a new array.`
+- join() - `Joins all elements of an array into a string.`
+- pop() - `Removes the last element of an array and returns that element.`
+- push() - `Adds one or more elements to the end of an array and returns the new length of the array.`
+- shift() - `Removes the first element of an array and returns that element.`
+- unshift() - `Adds one or more elements to the beginning of an array and returns the new length of the array.`
+- reverse() - `Reverses the order of the elements in an array.`
+- slice() - `Returns a shallow copy of a portion of an array into a new array.`
+- splice() - `Changes the contents of an array by removing or replacing existing elements and/or adding new elements.`
+- sort() - `Sorts the elements of an array in place.`
+- indexOf() - `Returns the first index at which a given element can be found in an array.`
+- lastIndexOf() - `Returns the last index at which a given element can be found in an array.`
+- forEach() - `Executes a provided function once for each array element.`
+- map() - `Creates a new array with the results of calling a provided function on every element in the calling array.`
+- filter() - `Creates a new array with all elements that pass the test implemented by the provided function.`
+- reduce() - `Executes a provided function for each value of the array (from left-to-right) and returns a single value.`
+- reduceRight() - `Executes a provided function for each value of the array (from right-to-left) and returns a single value.`
 
 # Objects + methods
 
