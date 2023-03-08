@@ -3,14 +3,11 @@
 - [Closures](#Closures) 
 - [Execution Context](#Execution-Context)
 - [Variables(var,let,const)](#Variables(var,let,const))
-- [Operatures](#Operators)
 - [Array & methods](#Array-&-methods)
 - [Objects + methods](#Objects-+-methods)
-- [Functions](#Fuctions)
 - [Error Handling](#Error-Handling)
 - [Strick Mode](#Strict-Mode)
 - [Timeout & Interval](#Timeout-&-Interval)
-- [Classes](#Classes)
 
 # Primitive
 ### In JavaScript, a primitive (primitive value, primitive data type) is data that is not an object and has no methods or properties. There are 7 primitive data types:
@@ -65,6 +62,19 @@ init();
 init() creates a local variable called name and a function called displayName(). The displayName() function is an inner function that is defined inside init() and is available only within the body of the init() function. Note that the displayName() function has no local variables of its own. However, since inner functions have access to the variables of outer functions, displayName() can access the variable name declared in the parent function, init().
 
 # Execution Context
+- In JavaScript, an execution context refers to the environment in which code is executed. It consists of variables, functions, and objects that are available at a particular point in time during the execution of a program.
+
+- Every time a function is called in JavaScript, a new execution context is created. This context contains a reference to the function being executed, as well as its arguments and local variables. It also has access to the outer environment, which is the context in which the function was defined.
+
+The execution context can be divided into two types:
+
+  - Global Execution Context: This is the outermost context and is created when the script is first loaded. It includes all the global variables and functions that are defined in the script.
+
+  - Function Execution Context: This context is created when a function is called. It includes all the local variables and arguments passed to the function, as well as any nested functions that are called within the function.
+
+- The JavaScript runtime maintains a stack of execution contexts called the "call stack". When a function is called, a new execution context is added to the top of the stack, and when the function returns, the context is removed from the stack. This allows JavaScript to keep track of the order in which functions are called and executed.
+
+**Understanding execution context is important in JavaScript because it helps developers understand how variables and functions are scoped, how closures work, and how the call stack operates. It also helps developers diagnose and debug errors that occur during program execution.**
 
 
 # Variables(var,let,const)
@@ -150,10 +160,6 @@ JavaScript provides a variety of methods for manipulating arrays. Here are some 
 - reduce() - `Executes a provided function for each value of the array (from left-to-right) and returns a single value.`
 - reduceRight() - `Executes a provided function for each value of the array (from right-to-left) and returns a single value.`
 
-# Objects + methods
-
-# Functions
-
 # Error Handling
 Error handling is an important part of any programming language, and JavaScript provides several ways to handle errors in your code. Here are some of the most common ways to handle errors in JavaScript:
 
@@ -238,7 +244,7 @@ const intervalId = setInterval(() => {
 }, 1000); // The function inside the setInterval() will execute every 1 second (1000 milliseconds) until the count is greater than 5
 ```
 
-# Classes
+# Objects + methods
 - `Object.assign()`: Copies the values of all enumerable own properties from one or more source objects to a target object and returns the target object.
 - `Object.create()`: Creates a new object with the specified prototype object and properties.
 - `Object.defineProperties()`: Defines new or modifies existing properties directly on an object, returning the object.
