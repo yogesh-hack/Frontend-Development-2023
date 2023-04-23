@@ -46,6 +46,23 @@ console.log(login(data));
 // {name: "yogesh",age: 21, address: "dehli"} -> Duck typing
 console.log(login({name: "yogesh",age: 21, address: "dehli"}));
 
+
+// Never type - cannot assign any value to a variable with a never type.
+// The never type represents the return type of a function that always throws an error or a function that contains an indefinite loop.
+function newmess(message: string): never{
+    throw new Error(message)
+}
+let a: number = 1;
+function loop(a: number): never{
+        while(true){
+            console.log(a);
+    }
+}
+
+console.log(loop(a));
+    
+console.log(newmess("this is typescript"))
+
 type ID = number | string;
 
 const Userdata: ID = 131; // number
@@ -114,10 +131,78 @@ const book: Ebook = {
 
 console.log(book);
 
+// merge two interface
+interface MyBook {
+    name: string;
+    price: number;
+}
+
+interface MyBook {
+    size: number;
+}
+
+// typescript merge the Property of same name interface
+const mybook: MyBook = {
+    name : "yogesh",
+    price: 202,
+    size: 20
+}
+
+// type and interface is same but merging is not work in type
+type MyBook = {
+    // Error : Duplicate identifier 'MyBook'.
+}
+
+// Unions (|)
+
+function addition(a: number | string, b: number | string) {
+    if (typeof a === 'number' && typeof b === 'number') {
+        return a + b;
+    }
+    if (typeof a === 'string' && typeof b === 'string') {
+        return a.concat(b);
+    }
+    throw new Error('Parameters must be numbers or strings');
+}
+
+type EmpID = number | string;
+
+function printEmpID(id: EmpID) {
+    // check if id is string or number and then apply string methods
+    if(typeof id === 'string'){
+        console.log(id.toUpperCase);
+    } else{
+        console.log(id);
+    }
+}
+
+printEmpID('jhsdg7263'); // JHSDG7263
+
+// rest Parameters (represents three dots (...args) and indefinite number of arguments as an array)
+function foo(...args: number[]): number[] {
+    return args;
+}
+console.log(foo(10,12,2))
+
+function getTotal(...nums: number[]): number{
+    let sum: number = 0;
+    nums.forEach((n) => sum += n);
+    return sum;
+}
+
+console.log(getTotal(1,2,3,4,5));
+
+// wihtout rest Parameters
+function getSum(nums: number[]): number{
+    let sum: number = 0;
+    nums.forEach((n) => sum += n);
+    return sum;
+}
+
+const nums:number[] = [1,2,3,4,5];
+console.log(getSum(nums))
 
 
-
-
-
+// generics
 
 
