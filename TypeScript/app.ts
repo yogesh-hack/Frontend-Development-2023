@@ -202,7 +202,46 @@ function getSum(nums: number[]): number{
 const nums:number[] = [1,2,3,4,5];
 console.log(getSum(nums))
 
+// generics -> when we don't know which data type should be used
+function loginany<T>(args: T): void{
+    console.log(args)
+}
+loginany("typescript") // ok (<T> -> string)
+loginany([1,2,3,4,5]) // ok (<T> -> number[])
+loginany(true) // ok (<T> -> boolean)
 
-// generics
+
+// generics example
+interface isAge  {
+    age: number;
+}
+
+function getOlderAge(people: isAge[]): isAge{
+    // sort the array
+    return people.sort((a,b) => b.age - a.age)[0];
+}
+
+interface Person{
+    name: string;
+    age : number;
+}
+
+const person: Person[] = [
+    {name: 'joe', age: 20},
+    {name: 'beck', age: 17},
+    {name: 'love', age: 26}
+]
+const people = [{age : 20}, {age: 12}, {age: 30}];
+getOlderAge(people).age;
+
+getOlderAge(person).name; // name is not access it.
+
+// use generics
+function getolderAge<Type extends isAge>(people: Type[]): Type{
+    // sort the array
+    return people.sort((a,b) => b.age - a.age)[0];
+}
+
+getolderAge(person).name; // now name is accessed.
 
 
